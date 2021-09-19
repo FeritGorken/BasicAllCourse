@@ -11,6 +11,38 @@ namespace ListCollection
         static void Main(string[] args)
         {
 
+            #region Dizi - List
+            int[] sayilar = new int[3];
+            sayilar[0] = 5;
+            sayilar[1] = 5;
+            sayilar[2] = 5;
+            foreach (var item in sayilar)
+            {
+                Console.WriteLine(item);
+            }
+            Console.WriteLine("***********************************");
+            List<int> numbers = new List<int>(sayilar);
+            numbers.Add(4);
+            numbers.Add(4);
+            numbers.Add(4);
+            numbers.Add(4);
+            foreach (var item in numbers)
+            {
+                Console.WriteLine(item);
+            }
+
+            numbers.Remove(5);
+            numbers.RemoveAt(5);
+            numbers.BinarySearch(5);//hangi indexde
+            Console.WriteLine("***********************************");
+            foreach (var item in numbers)
+            {
+                Console.WriteLine(item);
+            }
+
+            #endregion
+
+
             #region ListCollection
             List<Customer> customers = new List<Customer>()
             {
@@ -51,7 +83,7 @@ namespace ListCollection
             }
 
             List<Customer> cst = customers.Where(a => a.Id == 1).ToList();
-            Console.WriteLine(cst);
+            Console.WriteLine(cst.Capacity);
 
             #endregion
 

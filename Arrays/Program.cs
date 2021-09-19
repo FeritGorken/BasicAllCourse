@@ -27,6 +27,20 @@ namespace Arrays
 
                 Console.WriteLine(item);
             }
+
+            #region Çok Boyutlu Dizi
+                               //0          //1          //2
+                            //0  1  2    //0  1  2    //0  1  2
+            int[,] dizi = { { 4, 5, 6 }, { 7, 8, 9 }, { 1, 2, 3 } };
+            Console.WriteLine(dizi[2,1]);
+
+                                              //0                                        //1
+                                 //0          //1          //2              //0          //1          //2
+                              //0  1  2    //0  1  2    //0  1  2        //0  1  2    //0  1  2    //0  1  2
+            int[,,] arr = { { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } }, { { 7, 8, 9 }, { 4, 5, 6 }, { 3, 2, 1 } } };
+            //mantık 0,1,2 diye ayırırken ona göre paranteze almak 
+            #endregion
+
             Console.ReadLine();
         }
     }

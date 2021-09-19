@@ -10,6 +10,28 @@ namespace Variables
     {
         static void Main(string[] args)
         {
+            #region Variables Feature
+
+            //int değer tipleridir. referans tip değildir
+            int yyy = 15;
+            Console.WriteLine($"deger{yyy}");
+            Console.WriteLine("deger"+yyy);
+            Console.WriteLine("deg{0}",yyy);
+
+            //Object ve var derleme anında hata verir 
+            //Dynamic çalışma hatası verir
+            //dynamic ve objectte casting yapmak daha doğru kullanım için geçerlidir.
+            object h = "test";
+            //h.Yazdir();//ide direk hata verir 
+
+            dynamic a = "deneme";
+            ///a.Yazdir();//ide hatayı basmaz derleme anın da hatayı vermez.Yalnızca çalıştırdıktan sonra runtime hatası verir.
+
+            //var : hangi atamayı yaparsan onun tipine dönüşür.
+            var aa = "5fsdfa";
+            //aa = 15;//var 'da bir kere değer ataması yaptıktan sonra başka tipe dönüştürmeye kalkınca hata verir.
+
+
             //object lerde cast işlemi uygulanır.
             //object a = 5;
             //int b = (int)a;
@@ -38,6 +60,9 @@ namespace Variables
 
             //double fd = Convert.ToDouble(Console.ReadLine());
             //Console.WriteLine("değer : {0}", fd);
+
+            #endregion
+
 
             if (day.monday == 0)
             {
